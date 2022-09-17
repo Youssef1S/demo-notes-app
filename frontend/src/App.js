@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Auth } from "aws-amplify";
+import Routes from "./Routes";
 import { LinkContainer } from "react-router-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Routes from "./Routes";
-import { AppContext } from "./lib/contextLib";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { AppContext } from "./lib/contextLib";
+import { Auth } from "aws-amplify";
 import "./App.css";
 
 function App() {
