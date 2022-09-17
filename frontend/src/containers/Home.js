@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { API } from "aws-amplify";
 import ListGroup from "react-bootstrap/ListGroup";
-import { BsPencilSquare } from "react-icons/bs";
-import { LinkContainer } from "react-router-bootstrap";
 import { useAppContext } from "../lib/contextLib";
+import { API } from "aws-amplify";
 import { onError } from "../lib/errorLib";
 import "./Home.css";
+import { BsPencilSquare } from "react-icons/bs";
+import { LinkContainer } from "react-router-bootstrap";
 
 export default function Home() {
   const [notes, setNotes] = useState([]);
@@ -41,7 +41,7 @@ export default function Home() {
         <LinkContainer to="/notes/new">
           <ListGroup.Item action className="py-3 text-nowrap text-truncate">
             <BsPencilSquare size={17} />
-            <span className="ml-2 font-weight-bold">Create a new note</span>
+            <span className="ms-2 font-weight-bold">Create a new note</span>
           </ListGroup.Item>
         </LinkContainer>
         {notes.map(({ noteId, content, createdAt }) => (
